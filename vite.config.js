@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
-import legacy from "@vitejs/plugin-legacy";
 import { createVuePlugin } from "vite-plugin-vue2";
+import legacy from "@vitejs/plugin-legacy";
 import viteCompression from "vite-plugin-compression";
 import path from "path";
 
