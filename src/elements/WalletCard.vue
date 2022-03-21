@@ -77,6 +77,7 @@ export default {
   justify-content: center;
   align-items: center;
   user-select: none;
+  box-shadow: $shadow-md;
 
   &__top {
     width: 100%;
@@ -91,7 +92,7 @@ export default {
 
     &__number {
       padding-left: $space-xs;
-      color: $color-blue-light;
+      color: $color-light-blue;
     }
 
     &__icon {
@@ -106,7 +107,7 @@ export default {
     opacity: 50%;
     border: 0;
     height: 1px;
-    background-color: $color-blue-light;
+    background-color: $color-light-blue;
   }
 
   &__bottom {
@@ -124,7 +125,7 @@ export default {
 
     &__secondary {
       padding-top: $space-xs;
-      color: $color-blue-light;
+      color: $color-light-blue;
       font-weight: $type-font-bold;
     }
   }
