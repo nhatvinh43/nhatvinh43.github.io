@@ -1,10 +1,10 @@
 <template>
   <div @click="handleClick">
-    <div :class="['text-icon', size]">
+    <div :class="['text-icon', size, { disabled }]">
       <img class="text-icon__icon" :src="iconSrc" />
     </div>
 
-    <div class="text-icon__label">
+    <div v-if="$slots.default" :class="['text-icon__label', { disabled }]">
       <slot />
     </div>
   </div>
@@ -23,6 +23,10 @@ export default {
       type: String,
       required: true,
       default: null,
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {
@@ -71,8 +75,26 @@ export default {
   }
 
   &__label {
+    font-weight: $type-font-bold;
     padding-top: $space-xs;
+    cursor: pointer;
     text-align: center;
+    user-select: none;
+    line-height: $line-height-body;
+
+    &.disabled {
+      opacity: 50%;
+      cursor: default;
+    }
+  }
+
+  &.disabled {
+    cursor: default;
+    user-select: none;
+
+    .text-icon__icon {
+      opacity: 0.5;
+    }
   }
 }
 </style>
