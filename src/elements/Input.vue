@@ -1,7 +1,14 @@
 <template>
   <div>
     <div class="label" v-if="label">{{ label }}</div>
-    <input class="input" :type="type" :min="min" :max="max" :value="value" />
+    <input
+      :disabled="disabled"
+      class="input"
+      :type="type"
+      :min="min"
+      :max="max"
+      :value="value"
+    />
   </div>
 </template>
 
@@ -29,6 +36,10 @@ export default {
       type: String,
       default: null,
     },
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
@@ -47,11 +58,16 @@ export default {
   font-family: $type-font-body;
   font-size: $type-size-body;
   border-radius: $radius-sm;
-  padding: 10px 15px;
+  padding: $space-xs 2 * $space-xs;
   border: 1px solid $color-grey;
 
   &:focus {
     outline: none;
+  }
+
+  &:disabled {
+    background-color: $color-light-grey;
+    color: $color-disabled;
   }
 }
 </style>
