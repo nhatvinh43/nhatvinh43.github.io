@@ -1,27 +1,20 @@
 <template>
-  <div>THIS IS HOME</div>
+  <div class="home">
+    <router-view />
+  </div>
 </template>
 <script>
-import HomeApi from "@/api/modules/HomeApi";
 export default {
   name: "Home",
-  components: {},
-  computed: {},
-  data: () => ({}),
-  beforeCreate() {},
-  created() {},
-  beforeMount() {},
-  mounted() {},
-  beforeUpdate() {},
-  updated() {},
-  activated() {}, //when keep-alive
-  deactivated() {}, //when keep-alive
-  beforeDestroy() {},
-  destroyed() {},
-  methods: {
-    // getDatList(){
-    //   HomeApi.getDatList()
-    // }
-  },
 };
 </script>
+
+<style lang="scss" scoped>
+.home {
+  width: 375px;
+  height: 600px;
+  border: 1px solid $color-grey;
+  padding: $space-md;
+  border-radius: $radius-md;
+}
+</style>

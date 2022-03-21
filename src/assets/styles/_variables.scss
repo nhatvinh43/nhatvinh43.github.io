@@ -1,16 +1,19 @@
 //  Colors
 $color-blue: #1273EA;
-$color-blue-light: #8DC9F9;
+$color-light-blue: #8DC9F9;
 $color-white: #ffffff;
 $color-light: #F7F9FC;
 $color-grey: #C5CEE0;
+$color-light-grey: #EDF1F7;
 $color-dark: #57627B;
 $color-body:#151A30; 
+$color-disabled: #8F9BB3;
 $color-gradient-blue: linear-gradient(to right, #1273ea, #1c94f4);
 
 // Sizes
 $type-size-large: 32px;
 $type-size-body: 14px;
+$type-size-medium: 16px;
 $type-size-small: 12px;
 $type-size-caption: 10px;
 
@@ -34,3 +37,6 @@ $space-md: 32px;
 
 // Line height
 $line-height-body: 20px;
+
+//  Shadow
+$shadow-md: 0 12px 20px -4px $color-grey;
